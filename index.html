@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Explorer – Discover Films by Country</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-container">
+    <header class="app-header">
+      <h1 class="app-title">🎬 CineMap</h1>
+      <p class="app-subtitle"><span class="animated-text">Discover world cultures through cinema</span> 🍿</p>
+    </header>
+
+    <div class="search-controls">
+      <div class="select-wrapper">
+        <select id="countryDropdown" class="styled-select">
+          <option value=""> Select Country</option>
+          <option value="Japan"> Japan</option>
+          <option value="France"> France</option>
+          <option value="India"> India</option>
+          <option value="Mexico"> Mexico</option>
+          <option value="South Korea"> South Korea</option>
+          <option value="Italy"> Italy</option>
+          <option value="Egypt"> Egypt</option>
+          <option value="Brazil"> Brazil</option>
+          <option value="Germany"> Germany</option>
+          <option value="China"> China</option>
+          <option value="Russia"> Russia</option>
+          <option value="Spain"> Spain</option>
+          <option value="Thailand"> Thailand</option>
+          <option value="Nigeria"> Nigeria</option>
+          <option value="Iran"> Iran</option>
+          <option value="Turkey"> Turkey</option>
+          <option value="United States of America"> United States</option>
+          <option value="Palestine"> Palestine</option>
+        </select>
+      </div>
+
+      <div class="select-wrapper">
+        <select id="genreDropdown" class="styled-select">
+          <option value=""> Select Genre</option>
+          <option value="28"> Action</option>
+          <option value="12"> Adventure</option>
+          <option value="16"> Animation</option>
+          <option value="35"> Comedy</option>
+          <option value="80"> Crime</option>
+          <option value="18"> Drama</option>
+          <option value="14"> Fantasy</option>
+          <option value="27"> Horror</option>
+          <option value="10402"> Music</option>
+          <option value="9648"> Mystery</option>
+          <option value="10749"> Romance</option>
+          <option value="878"> Sci-Fi</option>
+          <option value="53"> Thriller</option>
+          <option value="10752"> War</option>
+          <option value="37"> Western</option>
+        </select>
+      </div>
+
+      <button id="searchButton" class="primary-btn">Search Movies</button>
+      <button id="randomButton" class="secondary-btn">🎲 Surprise Me</button>
+    </div>
+
+    <div id="loadingIndicator" class="hidden" style="text-align: center; margin: 2rem 0;">
+      <div style="display: inline-block; padding: 1rem; background: var(--card-bg); border-radius: 8px;">
+        Loading movies... <span class="loading-dots">...</span>
+      </div>
+    </div>
+
+    <div id="resultsContainer"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
